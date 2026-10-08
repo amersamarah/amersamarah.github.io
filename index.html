@@ -1,10 +1,269 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Website</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amer Samarah</title>
+  <meta name="description" content="Amer Samarah — mixed-signal and silicon. PLL, wireline, DRAM, analog CAD. Tesla." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #161310;
+      --paper: #f4efe7;
+      --muted: #6b6156;
+      --line: #d8cfc3;
+      --copper: #9a6233;
+      --rule: 1px solid var(--line);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    a { color: var(--copper); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(20rem, 38%) 1fr;
+      min-height: 100vh;
+    }
+    .hero-copy {
+      padding: 2.4rem 2.6rem 2.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: var(--rule);
+    }
+    .mark {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    h1 {
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(3.2rem, 6vw, 5.4rem);
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+      margin: 4.5rem 0 1.2rem;
+    }
+    .lede {
+      font-size: 1.15rem;
+      max-width: 28rem;
+      color: var(--ink);
+    }
+    .lede em { font-style: italic; font-family: Fraunces, Georgia, serif; }
+    .hero-meta {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .hero-photo {
+      margin: 0;
+      background: #0c0b0a;
+      overflow: hidden;
+    }
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    main {
+      max-width: 46rem;
+      margin: 0 auto;
+      padding: 4.5rem 1.6rem 6rem;
+    }
+    h2 {
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 400;
+      font-size: 1.85rem;
+      margin: 3.4rem 0 0.9rem;
+    }
+    p { margin: 0 0 1rem; color: #2a2520; }
+    .now {
+      border-top: var(--rule);
+      border-bottom: var(--rule);
+      padding: 1.4rem 0;
+      margin: 0 0 0.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 7.2rem 1fr;
+      gap: 0.35rem 1.2rem;
+      margin: 1.4rem 0 0;
+    }
+    .grid dt {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.78rem;
+      color: var(--copper);
+      padding-top: 0.18rem;
+    }
+    .grid dd { margin: 0; }
+    ol.papers {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+      counter-reset: p;
+    }
+    ol.papers li {
+      counter-increment: p;
+      padding: 0.95rem 0 0.95rem 2.4rem;
+      border-top: var(--rule);
+      position: relative;
+    }
+    ol.papers li::before {
+      content: counter(p, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      top: 1.05rem;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.75rem;
+      color: var(--copper);
+    }
+    ol.papers strong { font-weight: 600; }
+    .cite {
+      display: block;
+      margin-top: 0.25rem;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    footer {
+      margin-top: 3.5rem;
+      padding-top: 1.2rem;
+      border-top: var(--rule);
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-copy { border-right: 0; min-height: 70vh; }
+      .hero-photo { height: 42vh; }
+      h1 { margin-top: 2.4rem; }
+      .grid { grid-template-columns: 1fr; gap: 0.15rem; }
+      .grid dt { margin-top: 0.85rem; }
+    }
+  </style>
 </head>
 <body>
-<h1>Hello World, this is my first web page.</h1>
+  <header class="hero">
+    <div class="hero-copy">
+      <div class="mark">Mixed-signal · Silicon · CAD</div>
+      <div>
+        <h1>Amer<br />Samarah</h1>
+        <p class="lede">
+          I design and debug the analog and memory edge of large chips —
+          clocks, wireline, DRAM — and the CAD that makes that work repeatable.
+          Now at <em>Tesla</em>.
+        </p>
+      </div>
+      <div class="hero-meta">
+        <span>Tesla</span>
+        <span>ex-Intel SoC R&amp;D</span>
+        <span>Ph.D. Toronto</span>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <img src="amer-samarah-hero.jpg" alt="Studio photograph of a silicon die and gold traces" />
+    </figure>
+  </header>
+
+  <main>
+    <p class="now">
+      I work at Tesla on custom AI silicon: DRAM and LPDDR bring-up,
+      high-speed I/O, timing and DFT, and analog CAD. The through-line is
+      the same as the Ph.D. — get a noisy analog loop to behave, then
+      measure it on the bench until the model and the silicon agree.
+    </p>
+
+    <h2>Path</h2>
+    <dl class="grid">
+      <dt>2002</dt>
+      <dd>B.Sc., An-Najah National University, Palestine.</dd>
+      <dt>2006</dt>
+      <dd>M.A.Sc., Concordia. Assertion-based verification, SystemC, coverage-directed test generation.</dd>
+      <dt>2010</dt>
+      <dd>Graduate intern, Broadcom. High-speed communication circuits.</dd>
+      <dt>2012–</dt>
+      <dd>Independent consulting in high-speed comms, alongside the doctorate.</dd>
+      <dt>2016</dt>
+      <dd>Ph.D., University of Toronto, with Anthony Chan Carusone. Thesis: <em>Improved phase detection for digital phase-locked loops</em>.</dd>
+      <dt>Intel</dt>
+      <dd>SoC design engineer, R&amp;D, Santa Clara. Mixed-signal and system modeling on large SoCs.</dd>
+      <dt>Tesla</dt>
+      <dd>Silicon. Memory interfaces, PCIe-class I/O, on-die sensors, signoff, and the analog-CAD loop from schematic to measurement.</dd>
+    </dl>
+
+    <h2>What I care about</h2>
+    <p>
+      Wireline transceivers, mixed-signal loops, CDR and PLL, DRAM timing,
+      and analog CAD. I like problems where the circuit, the model, and the
+      lab disagree — and the job is to find which one is lying.
+    </p>
+    <p>
+      Lately that has meant LPDDR bring-up, PCIe link behavior, PVT sensors,
+      and building small tools that turn a netlist or a timing report into
+      something a person can actually read.
+    </p>
+
+    <h2>Selected papers</h2>
+    <p style="color:var(--muted);font-size:0.95rem;">
+      ~227 citations. Google Scholar profile
+      <a href="https://scholar.google.com/citations?user=cpCBV0wAAAAJ">cpCBV0wAAAAJ</a>.
+    </p>
+    <ol class="papers">
+      <li>
+        <strong>A digital phase-locked loop with calibrated coarse and stochastic fine TDC</strong>
+        <span class="cite">A. Samarah, A. C. Carusone. IEEE Journal of Solid-State Circuits, 2013. ~99 citations.</span>
+      </li>
+      <li>
+        <strong>Automated coverage directed test generation using a cell-based genetic algorithm</strong>
+        <span class="cite">A. Samarah, A. Habibi, S. Tahar, N. Kharma. HLDVT, 2006. ~68 citations.</span>
+      </li>
+      <li>
+        <strong>Efficient assertion based verification using TLM</strong>
+        <span class="cite">A. Habibi, S. Tahar, A. Samarah, D. Li, O. A. Mohamed. DATE, 2006.</span>
+      </li>
+      <li>
+        <strong>Multi-phase bang-bang digital PLL with accelerated frequency acquisition</strong>
+        <span class="cite">A. Samarah, A. C. Carusone. ISCAS, 2015.</span>
+      </li>
+      <li>
+        <strong>Cycle-slipping pull-in range of bang-bang PLLs</strong>
+        <span class="cite">A. Samarah, A. C. Carusone. NEWCAS, 2015.</span>
+      </li>
+      <li>
+        <strong>Improved phase detection for digital phase-locked loops</strong>
+        <span class="cite">Ph.D. dissertation, University of Toronto, 2016.</span>
+      </li>
+    </ol>
+
+    <footer>
+      <a href="https://scholar.google.com/citations?user=cpCBV0wAAAAJ">Scholar</a>
+      ·
+      <a href="https://ieeexplore.ieee.org/author/37295275300">IEEE Xplore</a>
+      ·
+      <a href="https://www.linkedin.com/in/amer-s-92835b2">LinkedIn</a>
+      ·
+      <a href="mailto:asamarah@tesla.com">asamarah@tesla.com</a>
+      <p style="margin-top:0.8rem;font-size:0.82rem;">
+        The LinkedIn URL in the request was the feed home page, not a profile.
+        Public sources used: Google Scholar, IEEE author record, ResearchGate (Intel SoC R&amp;D),
+        and current Tesla silicon work.
+      </p>
+    </footer>
+  </main>
 </body>
 </html>
