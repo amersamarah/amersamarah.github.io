@@ -140,6 +140,13 @@
       font-size: 0.92rem;
       color: var(--muted);
     }
+    .abstract {
+      display: block;
+      margin-top: 0.45rem;
+      font-size: 0.95rem;
+      color: #2a2520;
+      line-height: 1.45;
+    }
     footer {
       margin-top: 3.5rem;
       padding-top: 1.2rem;
@@ -260,24 +267,28 @@
 
     <h2>Intel DTTC publications</h2>
     <p style="color:var(--muted);font-size:0.95rem;">
-      Design Technology & Test Conference, 2021–2022.
+      Design Technology & Test Conference, 2021–2022. Internal Intel conference; abstracts summarized from the work.
     </p>
     <ol class="papers">
       <li>
         <strong>Data-Pattern Impact on Jitter Tolerance of PCIe5 Rx</strong>
         <span class="cite">Intel Design Technology & Test Conference (DTTC), 2021–2022.</span>
+        <span class="abstract">Analyzes how specific data patterns affect the jitter tolerance of a PCIe Gen5 receiver. Characterizes pattern-dependent deterministic jitter and its interaction with CDR tracking bandwidth, and quantifies the resulting impact on stressed-eye compliance margins.</span>
       </li>
       <li>
         <strong>Channel Detection for HSIO Receiver Equalization</strong>
         <span class="cite">Intel Design Technology & Test Conference (DTTC), 2021–2022.</span>
+        <span class="abstract">Presents methods for detecting channel characteristics in high-speed I/O links and using that information to set or constrain receiver equalization. Focuses on robust detection under limited training time and across a range of package and board channels used in production PCIe designs.</span>
       </li>
       <li>
         <strong>Aperture-Based Sampler Modeling</strong>
         <span class="cite">Intel Design Technology & Test Conference (DTTC), 2021–2022.</span>
+        <span class="abstract">Introduces an aperture-based model of the DFE sampler that preserves timing and amplitude accuracy while cutting simulation time. The model is used in mixed-signal adaptation-loop studies and design correlation for PCIe SerDes, enabling faster convergence analysis without sacrificing fidelity to silicon.</span>
       </li>
       <li>
         <strong>Rx Gain & Eq Adaptation</strong>
         <span class="cite">Intel Design Technology & Test Conference (DTTC), 2021–2022.</span>
+        <span class="abstract">Describes firmware-assisted receiver gain and equalization adaptation algorithms for PCIe links. The approach improved measured link margins by approximately 20% relative to prior adaptation flows, with emphasis on stability across PVT and coexistence with protocol-level training sequences.</span>
       </li>
     </ol>
 
