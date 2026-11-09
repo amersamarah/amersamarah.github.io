@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amer Samarah</title>
-  <meta name="description" content="Amer Samarah — mixed-signal and silicon. PLL, wireline, DRAM, analog CAD. Tesla." />
+  <meta name="description" content="Amer Samarah, Ph.D. — Silicon Design Lead, Memory (LPDDR6) & Mixed-Signal. RTL to custom layout, PDK & design enablement, high-speed I/O. Tesla Terafab." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -160,18 +160,18 @@
 <body>
   <header class="hero">
     <div class="hero-copy">
-      <div class="mark">Mixed-signal · Silicon · CAD</div>
+      <div class="mark">Memory · Mixed-Signal · Silicon</div>
       <div>
         <h1>Amer<br />Samarah</h1>
         <p class="lede">
-          I design and debug the analog and memory edge of large chips —
-          clocks, wireline, DRAM — and the CAD that makes that work repeatable.
-          Now at <em>Tesla</em>.
+          Silicon Design Lead for memory and mixed-signal — LPDDR6 architecture and RTL,
+          custom circuits on 2&nbsp;nm-class GAA, PDK and design enablement.
+          Building the capability from the ground up at <em>Tesla Terafab</em>.
         </p>
       </div>
       <div class="hero-meta">
-        <span>Tesla</span>
-        <span>ex-Intel SoC R&amp;D</span>
+        <span>Tesla Terafab</span>
+        <span>ex-Intel SerDes</span>
         <span>Ph.D. Toronto</span>
       </div>
     </div>
@@ -182,46 +182,56 @@
 
   <main>
     <p class="now">
-      I work at Tesla on custom AI silicon: DRAM and LPDDR bring-up,
-      high-speed I/O, timing and DFT, and analog CAD. The through-line is
-      the same as the Ph.D. — get a noisy analog loop to behave, then
-      measure it on the bench until the model and the silicon agree.
+      At Tesla Terafab I am standing up in-house memory and mixed-signal design:
+      LPDDR6 die models and real-number analog layers, SAR ADC and PHY circuits on
+      2&nbsp;nm GAA PDKs, PDK/EDA enablement on the HPC cluster, and the team and foundry
+      plans behind them. Previously brought up LPDDR5X, PCIe and UFS on Tesla AI5,
+      and led PCIe Gen5/6 SerDes from first silicon to production at Intel.
     </p>
 
     <h2>Path</h2>
     <dl class="grid">
       <dt>2002</dt>
-      <dd>B.Sc., An-Najah National University, Palestine.</dd>
+      <dd>B.Eng., Electrical Engineering (Minor: Computer Eng.), An-Najah National University.</dd>
       <dt>2006</dt>
-      <dd>M.A.Sc., Concordia. Assertion-based verification, SystemC, coverage-directed test generation.</dd>
+      <dd>M.A.Sc., Concordia. Automated coverage-directed test generation using genetic algorithms.</dd>
       <dt>2010</dt>
-      <dd>Graduate intern, Broadcom. High-speed communication circuits.</dd>
-      <dt>2012–</dt>
-      <dd>Independent consulting in high-speed comms, alongside the doctorate.</dd>
+      <dd>Mixed-signal design intern, Broadcom. Digital-PLL nonlinearities and test automation.</dd>
+      <dt>2012–14</dt>
+      <dd>Senior Design Engineer, FOTA. 28&nbsp;Gb/s current-mode transmit equalizer in 28&nbsp;nm CMOS.</dd>
+      <dt>2015–17</dt>
+      <dd>Senior MTS II, Rambus. 14&nbsp;GHz receiver clock distribution, EMX coil libraries, dual-loop LDO.</dd>
       <dt>2016</dt>
       <dd>Ph.D., University of Toronto, with Anthony Chan Carusone. Thesis: <em>Improved phase detection for digital phase-locked loops</em>.</dd>
-      <dt>Intel</dt>
-      <dd>SoC design engineer, R&amp;D, Santa Clara. Mixed-signal and system modeling on large SoCs.</dd>
-      <dt>Tesla</dt>
-      <dd>Silicon. Memory interfaces, PCIe-class I/O, on-die sensors, signoff, and the analog-CAD loop from schematic to measurement.</dd>
+      <dt>2017–23</dt>
+      <dd>Senior Staff Design Engineer, Intel. PCIe Gen5/6 post-silicon leadership; ADC-based Gen7 SerDes on 18A; adaptation algorithms and mixed-signal methodology.</dd>
+      <dt>2023–26</dt>
+      <dd>Senior Staff Silicon Design Engineer, IO, Tesla. LPDDR5X bring-up @ 9.6&nbsp;Gbps/pin for AI5; PCIe and UFS optimization; XSR/HBM evaluation; IP-vendor and netlist analysis tooling.</dd>
+      <dt>2026–</dt>
+      <dd>Silicon Design Lead, Memory & Mixed-Signal Design Enablement, Tesla Terafab. LPDDR6 architecture/RTL/modeling, custom circuits and layout, PDK enablement, team and program leadership.</dd>
     </dl>
 
     <h2>What I care about</h2>
     <p>
-      Wireline transceivers, mixed-signal loops, CDR and PLL, DRAM timing,
-      and analog CAD. I like problems where the circuit, the model, and the
-      lab disagree — and the job is to find which one is lying.
+      Memory interfaces (LPDDR6/5X, HBM), high-speed SerDes and I/O (PCIe Gen5–7,
+      UCIe/XSR, PAM4), analog/mixed-signal circuits (SAR ADC, CTLE/DFE, PLLs, ZQ/VREF),
+      real-number modeling and AMS co-simulation, and the full enablement stack from
+      PDK to tape-out. I like problems where the circuit, the model, and silicon
+      disagree — and the job is to find which one is lying.
     </p>
     <p>
-      Lately that has meant LPDDR bring-up, PCIe link behavior, PVT sensors,
-      and building small tools that turn a netlist or a timing report into
-      something a person can actually read.
+      Lately that has meant building LPDDR6 die models and SV-RNM analog layers,
+      driving a 10-bit SAR ADC from schematic to layout on a 2&nbsp;nm GAA PDK,
+      standing up licensed and open-source flows on the cluster, and running
+      autonomous AI agents for simulation, layout and verification.
     </p>
 
     <h2>Selected papers</h2>
     <p style="color:var(--muted);font-size:0.95rem;">
-      ~227 citations. Google Scholar profile
+      Google Scholar profile
       <a href="https://scholar.google.com/citations?user=cpCBV0wAAAAJ">cpCBV0wAAAAJ</a>.
+      Also Intel Design Technology & Test Conference (DTTC) 2021–2022 on PCIe5 Rx jitter,
+      channel detection, aperture-based sampler modeling, and Rx gain/eq adaptation.
     </p>
     <ol class="papers">
       <li>
@@ -257,12 +267,7 @@
       ·
       <a href="https://www.linkedin.com/in/amer-s-92835b2">LinkedIn</a>
       ·
-      <a href="mailto:asamarah@tesla.com">asamarah@tesla.com</a>
-      <p style="margin-top:0.8rem;font-size:0.82rem;">
-        The LinkedIn URL in the request was the feed home page, not a profile.
-        Public sources used: Google Scholar, IEEE author record, ResearchGate (Intel SoC R&amp;D),
-        and current Tesla silicon work.
-      </p>
+      <a href="mailto:asamarah@gmail.com">asamarah@gmail.com</a>
     </footer>
   </main>
 </body>
